@@ -87,3 +87,11 @@ button:hover {
     width: 100%;
   }
 }
+
+/* === Footer === */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 40px;
+}
