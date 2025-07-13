@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KeySonic - Typing Speed Tester</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+  <!-- 🌌 Starfield Canvas Background -->
+  <canvas id="starfield"></canvas>
+
+  <div class="container">
+    <h1>⌨️ KeySonic</h1>
+
+    <!-- Mode and Time Controls -->
+    <div class="controls" style="margin-bottom: 1.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+      <select id="modeSelect">
+        <option value="paragraphs">Paragraph</option>
+        <option value="sentences">Sentence</option>
+      </select>
+
+      <button onclick="startTest(15)">15s</button>
+      <button onclick="startTest(30)">30s</button>
+      <button onclick="startTest(60)">60s</button>
+
+      <input type="number" id="customTimeInput" placeholder="Custom sec" min="5" max="300" style="width: 100px;" />
+      <button onclick="startCustomTest()">▶️ Start</button>
+    </div>
+
+    <!-- Text Display -->
+    <div class="display no-copy" id="displayText">Click a time to start typing test.</div>
+
+    <!-- Typing Input -->
+    <textarea id="inputArea" placeholder="Start typing here..." disabled></textarea>
+
+    <!-- Live Stats -->
+    <div class="stats">
+      <div><strong>WPM</strong><br><span id="wpm">0</span></div>
+      <div><strong>Accuracy</strong><br><span id="accuracy">0%</span><br><span id="emoji" style="font-size: 1.5rem;">😐</span></div>
+      <div><strong>Time</strong><br><span id="time">0</span> sec</div>
+    </div>
+
+    <!-- Footer Controls -->
+    <div class="controls" style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+      <a href="results/result.html">
+        <button>📊 View Full Result</button>
+      </a>
+      <button id="stopBtn" class="hidden">⏹️ Stop</button>
+    </div>
+  </div>
+
+  <!-- Prevent copying the shown text -->
+  <script>
+    const display = document.getElementById("displayText");
+    display.addEventListener("copy", (e) => e.preventDefault());
+    display.addEventListener("contextmenu", (e) => e.preventDefault());
+  </script>
+
+  <!-- Main Script -->
+  <script src="script/main.js"></script>
+</body>
+</html>

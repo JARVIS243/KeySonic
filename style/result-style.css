@@ -1,0 +1,89 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0e0e10, #10141c, #0e1a25);
+  background-size: 300% 300%;
+  animation: gradientFlow 12s ease infinite;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: #00ffe0;
+  text-shadow: 0 0 8px #00ffe0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.results-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 8px rgba(0, 255, 224, 0.15);
+  backdrop-filter: blur(6px);
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.controls {
+  margin-top: 2rem;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #00ffe0;
+  background: #101012;
+  color: #00ffe0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00ffe0;
+  color: #101012;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ffe0;
+}
+
+/* Background Starfield Canvas */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background Flow Animation */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .results-box {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,176 @@
+/* === Global Background Gradient === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0e0e10, #10141c, #0e1a25);
+  background-size: 300% 300%;
+  animation: gradientFlow 12s ease infinite;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Container Wrapper === */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* === Heading === */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #00ffe0;
+  text-shadow: 0 0 8px #00ffe0;
+  margin-bottom: 2rem;
+}
+
+/* === Text Display === */
+.display {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #2a2a2a;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  min-height: 100px;
+  line-height: 1.6;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 255, 224, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+/* === Typing Input === */
+textarea {
+  width: 100%;
+  height: 120px;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 2px solid #00ffe0;
+  background: #18181b;
+  color: #f0f0f0;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffe0;
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 255, 224, 0.4); }
+  100% { box-shadow: 0 0 0 10px rgba(0, 255, 224, 0); }
+}
+
+/* === Controls (Buttons, Inputs, Selects) === */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.controls button,
+.controls select,
+.controls input[type='number'] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #00ffe0;
+  background: #101012;
+  color: #00ffe0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controls button:hover {
+  background: #00ffe0;
+  color: #101012;
+  font-weight: bold;
+  box-shadow: 0 0 10px #00ffe0;
+}
+
+/* === Stats Display === */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stats span {
+  font-size: 1.6rem;
+  display: block;
+  margin-top: 0.2rem;
+  color: #00ffe0;
+}
+
+/* === Emoji Animation === */
+.bounce {
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* === Hide Button === */
+.hidden {
+  display: none;
+}
+
+/* === Responsive Layout for Mobile === */
+@media (max-width: 600px) {
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .display {
+    font-size: 1rem;
+  }
+
+  textarea {
+    height: 100px;
+    font-size: 0.95rem;
+  }
+}
+
+/* === Starfield Background Canvas === */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+/* === Animated Background Flow === */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.no-copy {
+  user-select: none;
+  pointer-events: none;
+}

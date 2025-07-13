@@ -1,0 +1,21 @@
+{
+  "name": "KeySonic - Typing Speed Tester",
+  "short_name": "KeySonic",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f4f9fc",
+  "theme_color": "#007acc",
+  "description": "Test your typing speed with KeySonic. Choose between short sentences and paragraphs to measure your WPM and accuracy.",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
